@@ -2,7 +2,7 @@ import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
 import React from 'react';
 
 const Button = ({ children, onClick, className = '', variant = 'primary' }) => {
-  const baseStyle = 'uppercase flex items-center gap-4 px-8 py-3 rounded-lg font-normal text-[20px] leading-[22px] text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-opacity-50';
+  const baseStyle = 'uppercase flex items-center gap-2 px-5 py-3 rounded-lg font-normal text-sm leading-[1.1] text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-opacity-50';
 
   const variants = {
     primary: 'bg-[#423ADC] border border-[#423ADC] hover:bg-[#423ADC44]',
