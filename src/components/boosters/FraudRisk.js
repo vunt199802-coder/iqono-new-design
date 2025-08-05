@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../Button';
 import PromoSection from '../PromoSection';
-import { ChevronDownIcon } from '@heroicons/react/24/solid';
+import FAQ from '../FAQ';
 
 function FraudRisk() {
   return (
@@ -54,43 +54,7 @@ function FraudRisk() {
             </p>
           </div>
         </div>
-        <div className='flex flex-col gap-10 container mx-auto px-4 pb-20 mt-[-50px]'>
-          <p className='text-5xl text-[#111021]'>FAQ</p>
-          <div className='grid grid-cols-2 gap-5'>
-            <div className='flex items-center justify-between gap-6 bg-[#FCFCFC] rounded-2xl px-5 py-3'>
-              <p className='text-2xl text-[#111021]'>Who can join the referral programme?</p>
-              <ChevronDownIcon className='size-4 text-[#1F1F1F]' />
-            </div>
-            <div className='flex items-center justify-between gap-6 bg-[#FCFCFC] rounded-2xl px-5 py-3'>
-              <p className='text-2xl text-[#111021]'>How is my commission calculated?</p>
-              <ChevronDownIcon className='size-4 text-[#1F1F1F]' />
-            </div>
-            <div className='flex items-center justify-between gap-6 bg-[#FCFCFC] rounded-2xl px-5 py-3'>
-              <p className='text-2xl text-[#111021]'>How do I refer a business?</p>
-              <ChevronDownIcon className='size-4 text-[#1F1F1F]' />
-            </div>
-            <div className='flex items-center justify-between gap-6 bg-[#FCFCFC] rounded-2xl px-5 py-3'>
-              <p className='text-2xl text-[#111021]'>Do I need to be a Finera client?</p>
-              <ChevronDownIcon className='size-4 text-[#1F1F1F]' />
-            </div>
-            <div className='flex items-center justify-between gap-6 bg-[#FCFCFC] rounded-2xl px-5 py-3'>
-              <p className='text-2xl text-[#111021]'>What is the minimum payout amount?</p>
-              <ChevronDownIcon className='size-4 text-[#1F1F1F]' />
-            </div>
-            <div className='flex items-center justify-between gap-6 bg-[#FCFCFC] rounded-2xl px-5 py-3'>
-              <p className='text-2xl text-[#111021]'>How do I refer a business?</p>
-              <ChevronDownIcon className='size-4 text-[#1F1F1F]' />
-            </div>
-            <div className='flex items-center justify-between gap-6 bg-[#FCFCFC] rounded-2xl px-5 py-3'>
-              <p className='text-2xl text-[#111021]'>When do I get paid?</p>
-              <ChevronDownIcon className='size-4 text-[#1F1F1F]' />
-            </div>
-            <div className='flex items-center justify-between gap-6 bg-[#FCFCFC] rounded-2xl px-5 py-3'>
-              <p className='text-2xl text-[#111021]'>Can I refer multiple businesses?</p>
-              <ChevronDownIcon className='size-4 text-[#1F1F1F]' />
-            </div>
-          </div>
-        </div>
+        <FAQ pageType="booster" />
       </div>
       <PromoSection />
     </>

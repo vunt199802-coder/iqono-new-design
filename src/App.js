@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 import CardAcquiring from './components/products/CardAcquiring';
 import PayoutSolutions from './components/products/PayoutSolutions';
@@ -28,9 +29,10 @@ import './App.css';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col overflow-x-hidden">
         <Navbar />
-        <div className="flex-grow">
+        <div className="flex-grow pt-[72px]">
           <Routes>
             <Route path="/" element={<Home />} />
 
