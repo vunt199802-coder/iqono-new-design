@@ -25,6 +25,7 @@ import ReferralProgram from './components/partners/ReferralProgram';
 import PartnerWithUs from './components/partners/PartnerWithUs';
 
 import './App.css';
+import GetStarted from './components/GetStarted';
 
 function App() {
   return (
@@ -54,6 +55,8 @@ function App() {
 
             <Route path="/partners/referral" element={<ReferralProgram />} />
             <Route path="/partners/join" element={<PartnerWithUs />} />
+
+            <Route path="/get-started" element={<GetStarted />} />
           </Routes>
         </div>
         <Footer />

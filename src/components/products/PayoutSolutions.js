@@ -12,7 +12,7 @@ function PayoutSolutions() {
             <div className='flex flex-col items-start gap-10'>
               <p className='uppercase text-xl leading-[1.1] text-[#423ADC]'>01</p>
               <p className='text-5xl leading-[1.1] text-white'>Payouts solutions</p>
-              <p className='text-lg leading-[1.1] text-white opacity-80'>Global payouts in local currencies — fast, automated, and compliant.</p>
+              <p className='text-lg leading-[1.1] text-white opacity-80'>iQono is a next-generation payment platform built for high-risk payment</p>
               <div className="flex justify-center">
                 <button
                   className='w-full uppercase flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-normal text-sm leading-[1.1] text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-opacity-50 border border-[#423ADC] hover:bg-[#423ADC44]'

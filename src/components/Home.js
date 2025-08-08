@@ -3,7 +3,7 @@ import Button from './Button';
 
 const Home = () => {
   return (
-    <div >
+    <>
       <div className="relative bg-[url(/public/iQono.png)] bg-contain bg-no-repeat bg-bottom">
         <div className='grid sm:grid-cols-2 items-center justify-between'>
           <div className='flex justify-end'>
@@ -289,7 +289,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
