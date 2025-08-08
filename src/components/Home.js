@@ -104,7 +104,7 @@ const Home = () => {
       </div>
       <div className='px-4 py-20 bg-[#F5F4F9]'>
         <div className='container mx-auto flex items-center justify-center px-4'>
-          <img src='/photoroom2.png' alt='photoroom2' className='absolute w-[90%]' />
+          <img src='/Photoroom2.png' alt='photoroom2' className='absolute w-[90%]' />
           <div className='w-full flex flex-col z-10'>
             <p className='uppercase text-xl leading-[1.1] text-[#111021] opacity-80'>
               Boosters
