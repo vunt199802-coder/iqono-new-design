@@ -3,14 +3,15 @@ import emailjs from '@emailjs/browser';
 
 const GetStarted = () => {
   const form = useRef();
-  const emailjsConfigured = false;
+  const emailjsConfigured = true;
   const [formData, setFormData] = useState({
     name: '',
     lastName: '',
     email: '',
     phone: '',
     company: '',
-    description: ''
+    description: '',
+    to_email: 'sales@iqono.com'
   });
 
   const [errors, setErrors] = useState({});
@@ -64,21 +65,20 @@ const GetStarted = () => {
       console.log('Form data submitted:', formData);
 
       if (emailjsConfigured) {
-        // When EmailJS is configured, uncomment and use this code
-        // const serviceId = 'YOUR_SERVICE_ID';
-        // const templateId = 'YOUR_TEMPLATE_ID';
-        // const publicKey = 'YOUR_PUBLIC_KEY';
+        const serviceId = 'service_owf7nen';
+        const templateId = 'template_791nfis';
+        const publicKey = '95XYeHWL6YgXKx7c8';
 
-        // emailjs.sendForm(serviceId, templateId, form.current, publicKey)
-        //   .then((result) => {
-        //     console.log('Email sent successfully:', result.text);
-        //     setStatus({ submitting: false, submitted: true, error: null });
-        //     resetForm();
-        //   })
-        //   .catch((error) => {
-        //     console.error('Failed to send email:', error.text);
-        //     setStatus({ submitting: false, submitted: false, error: error.text });
-        //   });
+        emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+          .then((result) => {
+            console.log('Email sent successfully:', result.text);
+            setStatus({ submitting: false, submitted: true, error: null });
+            resetForm();
+          })
+          .catch((error) => {
+            console.error('Failed to send email:', error.text);
+            setStatus({ submitting: false, submitted: false, error: error.text });
+          });
       } else {
         setTimeout(() => {
           setStatus({ submitting: false, submitted: true, error: null });
@@ -95,7 +95,8 @@ const GetStarted = () => {
       email: '',
       phone: '',
       company: '',
-      description: ''
+      description: '',
+      to_email: 'sales@iqono.com'
     });
   };
 
@@ -108,6 +109,7 @@ const GetStarted = () => {
             onSubmit={handleSubmit}
             className='w-full z-10 max-w-full px-4 md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] md:pl-4'
           >
+            <input type="hidden" name="to_email" value={formData.to_email} />
             <div className='flex flex-col justify-end'>
               <p className='uppercase text-white text-5xl'>Get Started</p>
               <p className='text-white text-lg opacity-80 mt-5'>
