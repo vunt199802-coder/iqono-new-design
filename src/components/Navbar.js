@@ -6,8 +6,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const timeoutRef = useRef(null);
-  
-  // Clear any existing timeout when component unmounts
+
   useEffect(() => {
     return () => {
       if (timeoutRef.current) {
@@ -15,8 +14,7 @@ const Navbar = () => {
       }
     };
   }, []);
-  
-  // Handle mouse enter for parent menu item or dropdown
+
   const handleMouseEnter = (index) => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -24,13 +22,12 @@ const Navbar = () => {
     }
     setActiveDropdown(index);
   };
-  
-  // Handle mouse leave with delay to prevent flickering
+
   const handleMouseLeave = () => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
-    
+
     timeoutRef.current = setTimeout(() => {
       setActiveDropdown(null);
       timeoutRef.current = null;
@@ -173,7 +170,8 @@ const Navbar = () => {
               </div>
             ))}
             <div className="flex justify-center">
-              <button
+              <Link
+                to="/get-started"
                 className='w-full uppercase flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-normal text-sm leading-[1.1] text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-opacity-50 bg-[#423ADC] border border-[#423ADC] hover:bg-[#423ADC44]'
               >
                 <div className='flex w-4 h-4'>
@@ -185,7 +183,7 @@ const Navbar = () => {
                   </div>
                 </div>
                 Get Started
-              </button>
+              </Link>
             </div>
           </div>
         </div>

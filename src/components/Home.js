@@ -1,35 +1,39 @@
 import React from 'react';
 import Button from './Button';
+import { Link } from 'react-router-dom';
+import { screen } from '@testing-library/dom';
 
 const Home = () => {
   return (
     <>
       <div className="relative bg-[url(/public/iQono.png)] bg-contain bg-no-repeat bg-bottom">
-        <div className='grid sm:grid-cols-2 items-center justify-between'>
-          <div className='flex justify-end'>
-            <div className='w-full z-10 max-w-[320px] md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] pl-4'>
+        <div className='grid md:grid-cols-2 items-center justify-between'>
+          <div className='flex justify-center md:justify-end'>
+            <div className='w-full z-10 max-w-full px-4 md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] md:pl-4'>
               <p className='uppercase text-white text-[52px] xl:text-[64px] leading-[1.1] mb-10'>
                 Accelerate Payments. Maximize Acceptance. Go Global.
               </p>
               <p className='text-white text-lg leading-[1.2] mb-[60px] opacity-80'>
                 High-risk friendly. Global-ready. Start processing in under 48 hours.
               </p>
-              <div className='flex gap-[30px]'>
-                <Button variant="primary">Get Started</Button>
-                <Button variant="outline">About us</Button>
+              <div className='flex gap-[30px] flex-col md:flex-row'>
+                <Button variant="primary" className='w-full md:w-auto'>Get Started</Button>
+                <Link to="/company/about">
+                  <Button variant="outline" className='w-full md:w-auto'>About us</Button>
+                </Link>
               </div>
             </div>
           </div>
-          <div className='flex justify-end'>
-            <img className='object-cover w-2/3' src="/Group1707480780.png" />
+          <div className='flex justify-center md:justify-end'>
+            <img className='object-cover w-full md:w-2/3' src="/Group1707480780.png" />
           </div>
         </div>
       </div>
 
-      <div className='bg-gradient-to-b from-[transparent] to-[#423ADC55] mt-20'>
+      <div className='relative z-10 bg-gradient-to-b from-[transparent] to-[#423ADC55] mt-20'>
         <div className='container mx-auto px-4'>
-          <div className='flex items-center justify-between'>
-            <div className='flex flex-col gap-5 w-[35%]'>
+          <div className='flex items-center justify-between flex-col md:flex-row'>
+            <div className='flex flex-col gap-5 w-full md:w-[35%]'>
               <p className='uppercase text-white text-base leading-[1.1] opacity-80'>
                 Products
               </p>
@@ -37,20 +41,22 @@ const Home = () => {
                 All-In-One Payment Stack
               </p>
             </div>
-            <div className='w-1/2 flex items-center'>
+            <div className='md:w-1/2 flex items-center mt-10 md:mt-0'>
               <p className='w-[70%] text-white text-lg leading-[1.1] opacity-80'>
                 iQono delivers a full-stack payment suite — from card acquiring and payouts to APMs and Open Banking. Built for performance, scalability, and global reach.
               </p>
             </div>
           </div>
           <div className='mt-20 flex flex-col gap-10'>
-            <div className="h-[400px] bg-[url('/public/bg-1.png')] bg-cover bg-no-repeat rounded-3xl grid md:grid-cols-2 items-center content-center">
+            <div className="h-[700px] md:h-[400px] bg-[url('/public/bg-1.png')] bg-cover bg-no-repeat rounded-3xl grid md:grid-cols-2 items-center content-center">
               <img src='/payment1.png' />
               <div className='flex flex-col items-start gap-10 w-5/6'>
                 <p className='uppercase text-xl leading-[1.1] text-[#423ADC]'>01</p>
                 <p className='text-5xl leading-[1.1] text-white'>Payouts solutions</p>
                 <p className='text-lg leading-[1.1] text-white opacity-80'>Global payouts in local currencies — fast, automated, and compliant.</p>
-                <Button variant="outline">learn more</Button>
+                <Link to="/products/payouts">
+                  <Button variant="outline">learn more</Button>
+                </Link>
               </div>
             </div>
             <div className="h-[400px] bg-[url('/public/bg-2.png')] bg-cover bg-no-repeat rounded-3xl grid md:grid-cols-2 items-center content-center">
@@ -59,7 +65,9 @@ const Home = () => {
                 <p className='uppercase text-xl leading-[1.1] text-[#423ADC]'>02</p>
                 <p className='text-5xl leading-[1.1] text-white'>Card acquiring</p>
                 <p className='text-lg leading-[1.1] text-white opacity-80'>Accept high-risk cards with smart routing and high approval rates.</p>
-                <Button variant="outline">learn more</Button>
+                <Link to="/products/card-acquiring">
+                  <Button variant="outline">learn more</Button>
+                </Link>
               </div>
             </div>
             <div className="h-[400px] bg-[url('/public/bg-3.png')] bg-cover bg-no-repeat rounded-3xl grid md:grid-cols-2 items-center content-center">
@@ -71,7 +79,9 @@ const Home = () => {
                 <p className='uppercase text-xl leading-[1.1] text-[#423ADC]'>03</p>
                 <p className='text-5xl leading-[1.1] text-white'>APMs</p>
                 <p className='text-lg leading-[1.1] text-white opacity-80'>Accept high-risk cards with smart routing and high approval rates.</p>
-                <Button variant="outline">learn more</Button>
+                <Link to="/products/apms">
+                  <Button variant="outline">learn more</Button>
+                </Link>
               </div>
             </div>
             <div className="h-[400px] bg-[url('/public/bg-4.png')] bg-cover bg-no-repeat rounded-3xl grid md:grid-cols-2 items-center content-center">
@@ -83,7 +93,9 @@ const Home = () => {
                 <p className='uppercase text-xl leading-[1.1] text-[#423ADC]'>04</p>
                 <p className='text-5xl leading-[1.1] text-white'>Open Banking</p>
                 <p className='text-lg leading-[1.1] text-white opacity-80'>Accept high-risk cards with smart routing and high approval rates.</p>
-                <Button variant="outline">learn more</Button>
+                <Link to="/products/open-banking">
+                  <Button variant="outline">learn more</Button>
+                </Link>
               </div>
             </div>
             <div className="h-[400px] bg-[url('/public/bg-5.png')] bg-cover bg-no-repeat rounded-3xl grid md:grid-cols-2 items-center content-center">
@@ -95,7 +107,9 @@ const Home = () => {
                 <p className='uppercase text-xl leading-[1.1] text-[#423ADC]'>05</p>
                 <p className='text-5xl leading-[1.1] text-white'>Payment Gateway</p>
                 <p className='text-lg leading-[1.1] text-white opacity-80'>Accept high-risk cards with smart routing and high approval rates.</p>
-                <Button variant="outline">learn more</Button>
+                <Link to="/products/payment-gateway">
+                  <Button variant="outline">learn more</Button>
+                </Link>
               </div>
             </div>
             {/* <div className="rounded-t-3xl mx-[75px] sm:mx-[33px] lg:mx-[61px] border-[#423ADC40] h-[174px] lg:h-[240px] flex overflow-hidden bg-[url('/public/bg-3.png')] bg-cover"></div> */}

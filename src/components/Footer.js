@@ -66,7 +66,7 @@ const Footer = () => {
               </Link>
             </div>
             <div className='flex gap-5 mt-[60px]'>
-              <a href='#'>
+              {/* <a href='#'>
                 <div className='w-10 h-10 bg-[#423ADC1A] border border-[#423ADC0D] rounded-xl flex items-center justify-center'>
                   <img src='/github.png' className='w-5 h-5' />
                 </div>
@@ -75,8 +75,8 @@ const Footer = () => {
                 <div className='w-10 h-10 bg-[#423ADC1A] border border-[#423ADC0D] rounded-xl flex items-center justify-center'>
                   <img src='/x.png' className='w-5 h-5' />
                 </div>
-              </a>
-              <a href='#'>
+              </a> */}
+              <a href='https://www.linkedin.com/company/iqono'>
                 <div className='w-10 h-10 bg-[#423ADC1A] border border-[#423ADC0D] rounded-xl flex items-center justify-center'>
                   <img src='/in.png' className='w-5 h-5' />
                 </div>

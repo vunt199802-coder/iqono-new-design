@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '../Button';
 import PromoSection from '../PromoSection';
 import FAQ from '../FAQ';
+import { Link } from 'react-router-dom';
 
 function PaymentGateway() {
   return (
@@ -14,7 +15,8 @@ function PaymentGateway() {
               <p className='text-5xl leading-[1.1] text-white'>Payment Gateway</p>
               <p className='text-lg leading-[1.1] text-white opacity-80'>iQono is a next-generation payment platform built for high-risk payment</p>
               <div className="flex justify-center">
-                <button
+                <Link
+                  to="/get-started"
                   className='w-full uppercase flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-normal text-sm leading-[1.1] text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-opacity-50 border border-[#423ADC] hover:bg-[#423ADC44]'
                 >
                   Get Started
@@ -26,7 +28,7 @@ function PaymentGateway() {
                       <div className='w-2 h-2 bg-[#423ADC]' />
                     </div>
                   </div>
-                </button>
+                </Link>
               </div>
             </div>
             <div className='w-1/2'>

@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const GetStarted = () => {
+  const form = useRef();
+  const emailjsConfigured = false;
   const [formData, setFormData] = useState({
     name: '',
     lastName: '',
@@ -11,6 +14,11 @@ const GetStarted = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [status, setStatus] = useState({
+    submitting: false,
+    submitted: false,
+    error: null
+  });
 
   const validate = () => {
     const newErrors = {};
@@ -45,13 +53,50 @@ const GetStarted = () => {
       ...formData,
       [e.target.name]: e.target.value
     });
+    setErrors({});
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      console.log('Form submitted successfully:', formData);
+      setStatus({ submitting: true, submitted: false, error: null });
+
+      console.log('Form data submitted:', formData);
+
+      if (emailjsConfigured) {
+        // When EmailJS is configured, uncomment and use this code
+        // const serviceId = 'YOUR_SERVICE_ID';
+        // const templateId = 'YOUR_TEMPLATE_ID';
+        // const publicKey = 'YOUR_PUBLIC_KEY';
+
+        // emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+        //   .then((result) => {
+        //     console.log('Email sent successfully:', result.text);
+        //     setStatus({ submitting: false, submitted: true, error: null });
+        //     resetForm();
+        //   })
+        //   .catch((error) => {
+        //     console.error('Failed to send email:', error.text);
+        //     setStatus({ submitting: false, submitted: false, error: error.text });
+        //   });
+      } else {
+        setTimeout(() => {
+          setStatus({ submitting: false, submitted: true, error: null });
+          resetForm();
+        }, 1000);
+      }
     }
+  };
+
+  const resetForm = () => {
+    setFormData({
+      name: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      company: '',
+      description: ''
+    });
   };
 
   return (
@@ -59,6 +104,8 @@ const GetStarted = () => {
       <div className='grid sm:grid-cols-2 items-center justify-between'>
         <div className='flex justify-end'>
           <form
+            ref={form}
+            onSubmit={handleSubmit}
             className='w-full z-10 max-w-[320px] md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] pl-4'
           >
             <div className='flex flex-col justify-end'>
@@ -134,19 +181,36 @@ const GetStarted = () => {
                   />
                   {errors.description && <p className="text-red-400 text-sm mt-1">{errors.description}</p>}
                 </div>
+                {status.submitted && (
+                  <p className="text-green-400 text-sm mb-3">
+                    {emailjsConfigured 
+                      ? "Your message has been sent successfully!" 
+                      : "Form submitted successfully! (Demo mode - check console for form data)"}
+                  </p>
+                )}
+                {status.error && (
+                  <p className="text-red-400 text-sm mb-3">Failed to send message: {status.error}</p>
+                )}
                 <button
                   type="submit"
-                  className='w-full uppercase flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-normal text-sm leading-[1.1] text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-opacity-50 bg-[#423ADC] border border-[#423ADC] hover:bg-[#423ADC44]'
+                  disabled={status.submitting}
+                  className='w-full uppercase flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-normal text-sm leading-[1.1] text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-opacity-50 bg-[#423ADC] border border-[#423ADC] hover:bg-[#423ADC44] disabled:opacity-50 disabled:cursor-not-allowed'
                 >
-                  <div className='flex w-4 h-4'>
-                    <div className='flex flex-col w-2'>
-                      <div className='w-2 h-2 bg-white' />
-                    </div>
-                    <div className='flex flex-col justify-end w-2'>
-                      <div className='w-2 h-2 bg-white' />
-                    </div>
-                  </div>
-                  send
+                  {status.submitting ? (
+                    'Sending...'
+                  ) : (
+                    <>
+                      <div className='flex w-4 h-4'>
+                        <div className='flex flex-col w-2'>
+                          <div className='w-2 h-2 bg-white' />
+                        </div>
+                        <div className='flex flex-col justify-end w-2'>
+                          <div className='w-2 h-2 bg-white' />
+                        </div>
+                      </div>
+                      send
+                    </>
+                  )}
                 </button>
               </div>
             </div>

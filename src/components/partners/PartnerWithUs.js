@@ -191,7 +191,7 @@ function PartnerWithUs() {
               </div>
             </div>
           </div>
-          <div className='mt-20'>
+          <div className='mt-40'>
             <FAQ1 />
           </div>
           <div className="bg-[#423ADC0D] border border-[#423ADC40] bg-cover bg-no-repeat rounded-3xl flex items-center">
