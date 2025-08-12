@@ -6,7 +6,7 @@ function ReferralProgram() {
   return (
     <>
       <div className="relative bg-[url(/public/Referral.png)] bg-contain bg-no-repeat bg-bottom mt-[-72px]">
-        <div className='flex flex-col md:flex-row items-center justify-between'>
+        <div className='grid md:grid-cols-2 items-center justify-between'>
           <div className='flex justify-center md:justify-end'>
             <div className='w-full z-10 max-w-full px-4 md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] md:pl-4'>
               <p className='uppercase text-white text-[52px] xl:text-[64px] leading-[1.1] mb-10'>
@@ -27,7 +27,7 @@ function ReferralProgram() {
         </div>
       </div>
       <div className='bg-[#F6F6F6]'>
-        <div className='flex flex-col md:flex-row items-center justify-between'>
+        <div className='grid md:grid-cols-2 items-center justify-between'>
           <div className='flex mt-[-15%]'>
             <img className='object-cover w-4/5' src="/referral-bg.png" />
           </div>

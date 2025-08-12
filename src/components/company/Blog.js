@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function Blog() {
   return (
     <>
-      <div className='bg-[#F6F6F6] mt-[-72px]'>
+      {/* <div className='bg-[#F6F6F6] mt-[-72px]'>
         <div className='container mx-auto px-4 py-[60px]'>
           <p className='uppercase text-5xl text-[#111021]'>blog</p>
           <p className='text-base text-[#111021] mt-5'>Insights, trends, and updates shaping the future of global payments.</p>
@@ -112,17 +112,17 @@ function Blog() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className='container mx-auto px-4'>
-        <div className="bg-[#423ADC0D] border border-[#423ADC40] bg-cover bg-no-repeat rounded-3xl flex flex-col md:flex-row items-end mt-10">
-          <div className='md:w-1/2 flex flex-col items-start gap-10 px-[30px] py-[50px]'>
+        <div className="bg-[#423ADC0D] border border-[#423ADC40] bg-cover bg-no-repeat rounded-3xl flex flex-col md:flex-row items-end mt-10" data-aos="fade-up" data-aos-delay="100">
+          <div className='md:w-1/2 flex flex-col items-start gap-10 px-[30px] py-[50px]' data-aos="fade-right" data-aos-delay="200">
             <p className='text-5xl leading-[1.1] text-white'>Explore Insights - and
               <span className='text-[#C6DC3A]'> Power Your Growth </span>with the Full iQono Suite
             </p>
             <p className='text-lg leading-[1.1] text-white opacity-60'>From products to payouts, everything you need is one integration away.</p>
             <Button variant="primary">get started</Button>
           </div>
-          <div className='w-full md:w-1/2'>
+          <div className='w-full md:w-1/2' data-aos="fade-left" data-aos-delay="300">
             <img src='/Photoroom6.png' className='' />
           </div>
         </div>

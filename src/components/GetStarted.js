@@ -102,7 +102,7 @@ const GetStarted = () => {
   return (
     <div className="relative bg-[url(/public/GetStarted.png)] bg-contain bg-no-repeat bg-bottom mt-[-72px]">
       <div className='grid sm:grid-cols-2 items-center justify-between'>
-        <div className='flex justify-center md:justify-end'>
+        <div className='flex justify-center md:justify-end' data-aos="fade-right" data-aos-delay="100">
           <form
             ref={form}
             onSubmit={handleSubmit}
@@ -113,7 +113,7 @@ const GetStarted = () => {
               <p className='text-white text-lg opacity-80 mt-5'>
                 Ready to Accelerate Payments?
               </p>
-              <div className='flex flex-col gap-5 mt-10'>
+              <div className='flex flex-col gap-5 mt-10' data-aos="fade-up" data-aos-delay="200">
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
                   <div>
                     <input
@@ -183,9 +183,9 @@ const GetStarted = () => {
                 </div>
                 {status.submitted && (
                   <p className="text-green-400 text-sm mb-3">
-                    {emailjsConfigured 
-                      ? "Your message has been sent successfully!" 
-                      : "Form submitted successfully! (Demo mode - check console for form data)"}
+                    {emailjsConfigured
+                      ? "Your message has been sent successfully!"
+                      : "Form submitted successfully!"}
                   </p>
                 )}
                 {status.error && (
@@ -216,7 +216,7 @@ const GetStarted = () => {
             </div>
           </form>
         </div>
-        <div className='flex justify-center md:justify-end'>
+        <div className='flex justify-center md:justify-end' data-aos="fade-left" data-aos-delay="100">
           <img className='object-cover' src="/start.png" alt="Get Started" />
         </div>
       </div>

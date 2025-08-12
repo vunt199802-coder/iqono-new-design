@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <div className="relative bg-[url(/public/iQono.png)] bg-contain bg-no-repeat bg-bottom">
         <div className='grid md:grid-cols-2 items-center justify-between'>
-          <div className='flex justify-center md:justify-end'>
+          <div className='flex justify-center md:justify-end' data-aos="fade-right" data-aos-delay="100">
             <div className='w-full z-10 max-w-full px-4 md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] md:pl-4'>
               <p className='uppercase text-white text-[52px] xl:text-[64px] leading-[1.1] mb-10'>
                 Accelerate Payments. Maximize Acceptance. Go Global.
@@ -24,7 +24,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className='flex justify-center md:justify-end'>
+          <div className='flex justify-center md:justify-end' data-aos="fade-left" data-aos-delay="200">
             <img className='object-cover w-full md:w-2/3' src="/Group1707480780.png" />
           </div>
         </div>
@@ -33,7 +33,7 @@ const Home = () => {
       <div className='relative z-10 bg-gradient-to-b from-[transparent] to-[#423ADC55] mt-20'>
         <div className='container mx-auto px-4'>
           <div className='flex items-center justify-between flex-col md:flex-row'>
-            <div className='flex flex-col gap-5 w-full md:w-[35%]'>
+            <div className='flex flex-col gap-5 w-full md:w-[35%]' data-aos="fade-right" data-aos-delay="100">
               <p className='uppercase text-white text-base leading-[1.1] opacity-80'>
                 Products
               </p>
@@ -41,14 +41,14 @@ const Home = () => {
                 All-In-One Payment Stack
               </p>
             </div>
-            <div className='md:w-1/2 flex items-center mt-10 md:mt-0'>
+            <div className='md:w-1/2 flex items-center mt-10 md:mt-0' data-aos="fade-left" data-aos-delay="200">
               <p className='w-[70%] text-white text-lg leading-[1.1] opacity-80'>
                 iQono delivers a full-stack payment suite — from card acquiring and payouts to APMs and Open Banking. Built for performance, scalability, and global reach.
               </p>
             </div>
           </div>
           <div className='mt-20 flex flex-col gap-10'>
-            <div className="p-4 md:h-[400px] bg-[url('/public/bg-1.png')] bg-cover bg-no-repeat rounded-3xl flex flex-col-reverse md:grid md:grid-cols-2 items-center content-center">
+            <div className="p-4 md:h-[400px] bg-[url('/public/bg-1.png')] bg-cover bg-no-repeat rounded-3xl flex flex-col-reverse md:grid md:grid-cols-2 items-center content-center" data-aos="fade-up" data-aos-delay="100">
               <img src='/payment1.png' />
               <div className='flex flex-col items-start gap-10 w-5/6'>
                 <p className='uppercase text-xl leading-[1.1] text-[#423ADC]'>01</p>
@@ -59,7 +59,7 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="p-4 md:h-[400px] bg-[url('/public/bg-2.png')] bg-cover bg-no-repeat rounded-3xl flex flex-col-reverse md:grid md:grid-cols-2 items-center content-center">
+            <div className="p-4 md:h-[400px] bg-[url('/public/bg-2.png')] bg-cover bg-no-repeat rounded-3xl flex flex-col-reverse md:grid md:grid-cols-2 items-center content-center" data-aos="fade-up" data-aos-delay="200">
               <img src='/payment2.png' />
               <div className='flex flex-col items-start gap-10 w-5/6'>
                 <p className='uppercase text-xl leading-[1.1] text-[#423ADC]'>02</p>
@@ -70,7 +70,7 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="p-4 md:h-[400px] bg-[url('/public/bg-2.png')] bg-cover bg-no-repeat rounded-3xl flex flex-col-reverse md:grid md:grid-cols-2 items-center content-center">
+            <div className="p-4 md:h-[400px] bg-[url('/public/bg-2.png')] bg-cover bg-no-repeat rounded-3xl flex flex-col-reverse md:grid md:grid-cols-2 items-center content-center" data-aos="fade-up" data-aos-delay="200">
               <div className='relative'>
                 <img src='/apms/1.png' className='' />
                 <img src='/apms/2.png' className='absolute w-[50%] top-[32%] left-[15%]' />
@@ -84,7 +84,7 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="p-4 md:h-[400px] bg-[url('/public/bg-2.png')] bg-cover bg-no-repeat rounded-3xl flex flex-col-reverse md:grid md:grid-cols-2 items-center content-center">
+            <div className="p-4 md:h-[400px] bg-[url('/public/bg-2.png')] bg-cover bg-no-repeat rounded-3xl flex flex-col-reverse md:grid md:grid-cols-2 items-center content-center" data-aos="fade-up" data-aos-delay="200">
               <div className='relative'>
                 <img src='/open-banking/2.png' className='' />
                 <img src='/open-banking/1.png' className='absolute w-[60%] top-[32%] left-[15%]' />
@@ -98,7 +98,7 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="p-4 md:h-[400px] bg-[url('/public/bg-2.png')] bg-cover bg-no-repeat rounded-3xl flex flex-col-reverse md:grid md:grid-cols-2 items-center content-center">
+            <div className="p-4 md:h-[400px] bg-[url('/public/bg-2.png')] bg-cover bg-no-repeat rounded-3xl flex flex-col-reverse md:grid md:grid-cols-2 items-center content-center" data-aos="fade-up" data-aos-delay="200">
               <div className='relative'>
                 <img src='/payment-gateway/2.png' className='ml-[5%] w-3/4' />
                 <img src='/payment-gateway/1.png' className='absolute w-3/4 top-[26%] left-[4%]' />
@@ -120,13 +120,13 @@ const Home = () => {
         <div className='container mx-auto flex items-center justify-center px-4'>
           <img src='/Photoroom2.png' alt='photoroom2' className='absolute w-[90%]' />
           <div className='w-full flex flex-col z-10'>
-            <p className='uppercase text-xl leading-[1.1] text-[#111021] opacity-80'>
+            <p className='uppercase text-xl leading-[1.1] text-[#111021] opacity-80' data-aos="fade-up" data-aos-delay="100">
               Boosters
             </p>
-            <p className='uppercase text-5xl leading-[1.1] text-[#111021] mt-5'>
+            <p className='uppercase text-5xl leading-[1.1] text-[#111021] mt-5' data-aos="fade-up" data-aos-delay="150">
               Upgrade Your Flow
             </p>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-5 mt-20'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-5 mt-20' data-aos="fade-up" data-aos-delay="200">
               <div className='bg-[#FFFFFFCC] border border-[#1110210D] rounded-2xl p-8'>
                 <div className='w-8 h-8 flex'>
                   <div className='w-4 h-8 flex flex-col'>
@@ -230,7 +230,7 @@ const Home = () => {
       <div className="bg-[url('/public/bg.png')] bg-cover bg-no-repeat px-4 py-20">
         <div className='container mx-auto px-4'>
           <div className='flex justify-between flex-col md:flex-row'>
-            <div className='max-w-[870px] w-full md:w-1/2'>
+            <div className='max-w-[870px] w-full md:w-1/2' data-aos="fade-right" data-aos-delay="100">
               <p className='text-5xl leading-[1.1] text-white'>
                 How Get started?
               </p>
@@ -239,7 +239,7 @@ const Home = () => {
               </p>
               <img src='/get-started.png' className='w-[80%]' />
             </div>
-            <div className='max-w-[705px] flex-1'>
+            <div className='max-w-[705px] flex-1' data-aos="fade-left" data-aos-delay="200">
               <div className='flex flex-col gap-10'>
                 <div className='flex flex-col gap-5'>
                   <div className='h-[1px] bg-white' />
@@ -288,7 +288,7 @@ const Home = () => {
               <Button variant="primary" className='mt-[60px]'>Get Started</Button>
             </div>
           </div>
-          <div className="bg-[#423ADC0D] border border-[#423ADC40] bg-cover bg-no-repeat rounded-3xl flex flex-col md:flex-row items-end mt-10">
+          <div className="bg-[#423ADC0D] border border-[#423ADC40] bg-cover bg-no-repeat rounded-3xl flex flex-col md:flex-row items-end mt-10" data-aos="fade-up" data-aos-delay="100">
             <div className='md:w-1/2 flex flex-col items-start gap-10 px-[30px] py-[50px]'>
               <p className='uppercase text-xl leading-[1.1] text-[#423ADC]'>01</p>
               <p className='text-5xl leading-[1.1] text-white'>Start Processing

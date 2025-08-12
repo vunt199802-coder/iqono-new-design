@@ -10,7 +10,7 @@ function SmartRouting() {
       <div className='bg-[url(/public/product-bg.png)] bg-cover bg-no-repeat py-10'>
         <div className='container mx-auto px-4'>
           <div className='flex flex-col md:flex-row items-center justify-between'>
-            <div className='flex flex-col items-start gap-10'>
+            <div className='flex flex-col items-start gap-10' data-aos="fade-right" data-aos-delay="100">
               <p className='uppercase text-xl leading-[1.1] text-[#423ADC]'>03</p>
               <p className='text-5xl leading-[1.1] text-white'>Smart Routing</p>
               <p className='text-lg leading-[1.1] text-white opacity-80'>iQono is a next-generation payment platform built for high-risk payment</p>
@@ -31,7 +31,7 @@ function SmartRouting() {
                 </Link>
               </div>
             </div>
-            <div className='w-full md:w-1/2 mt-10 md:mt-0'>
+            <div className='w-full md:w-1/2 mt-10 md:mt-0' data-aos="fade-left" data-aos-delay="200">
               <img src='/booster-bg3.png' />
             </div>
           </div>
@@ -39,10 +39,10 @@ function SmartRouting() {
       </div>
       <div className='bg-[#F5F4F9]'>
         <div className='flex flex-col md:flex-row items-center justify-between'>
-          <div className='flex'>
+          <div className='flex' data-aos="fade-right" data-aos-delay="100">
             <img className='object-cover md:w-2/3' src="/booster3.png" />
           </div>
-          <div className='w-full z-10 max-w-full px-4 md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] md:pl-4'>
+          <div className='w-full z-10 max-w-full px-4 md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] md:pl-4' data-aos="fade-left" data-aos-delay="200">
             <p className='text-[#111021] text-5xl leading-[1.1] mb-10'>
               Smart Routing for Maximum Performance
             </p>
@@ -57,11 +57,13 @@ Whether you're handling affiliate commissions, supplier settlements, or mass dis
             </p>
           </div>
         </div>
-        <div className='hidden md:block'>
+        <div className='hidden md:block' data-aos="fade-up" data-aos-delay="300">
           <FAQ pageType="booster" />
         </div>
       </div>
-      <PromoSection />
+      <div data-aos="fade-up" data-aos-delay="100">
+        <PromoSection />
+      </div>
     </>
   );
 }

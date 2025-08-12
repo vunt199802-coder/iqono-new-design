@@ -6,8 +6,8 @@ function PartnerWithUs() {
   return (
     <>
       <div className="relative bg-[url(/public/Partners.png)] bg-contain bg-no-repeat bg-bottom mt-[-72px]">
-        <div className='flex flex-col md:flex-row items-center justify-between'>
-          <div className='flex justify-center md:justify-end'>
+        <div className='grid md:grid-cols-2 items-center justify-between'>
+          <div className='flex justify-center md:justify-end' data-aos="fade-right" data-aos-delay="100">
             <div className='w-full z-10 max-w-full px-4 md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] md:pl-4'>
               <p className='uppercase text-white text-[52px] xl:text-[64px] leading-[1.1] mb-10'>
                 Where Ambitious Partners Scale
@@ -21,17 +21,17 @@ function PartnerWithUs() {
               </div>
             </div>
           </div>
-          <div className='flex justify-center md:justify-end'>
+          <div className='flex justify-center md:justify-end' data-aos="fade-left" data-aos-delay="200">
             <img className='object-cover' src="/Group1707480808.png" />
           </div>
         </div>
       </div>
       <div className='bg-[#F6F6F6]'>
-        <div className='flex flex-col md:flex-row items-center justify-between'>
-          <div className='absolute left-0 md:relative flex mt-[-15%]'>
+        <div className='grid md:grid-cols-2 items-center justify-between'>
+          <div className='absolute left-0 md:relative flex mt-[-15%]' data-aos="fade-right" data-aos-delay="100">
             <img className='object-cover w-1/3 md:w-2/3' src="/partners-bg.png" />
           </div>
-          <div className='w-full z-10 max-w-full px-4 md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] md:pl-4'>
+          <div className='w-full z-10 max-w-full px-4 md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] md:pl-4' data-aos="fade-left" data-aos-delay="200">
             <p className='text-[#111021] text-5xl leading-[1.1] mb-10 mt-10 md:mt-0'>
               How to become partners
             </p>
@@ -47,7 +47,7 @@ function PartnerWithUs() {
         </div>
         <div className='container mx-auto px-4'>
           <div className='flex flex-col md:flex-row justify-between'>
-            <div className='max-w-[870px] w-full md:w-1/2'>
+            <div className='max-w-[870px] w-full md:w-1/2' data-aos="fade-right" data-aos-delay="100">
               <p className='uppercase text-5xl leading-[1.1] text-[#111021]'>
                 How Get started?
               </p>
@@ -56,7 +56,7 @@ function PartnerWithUs() {
               </p>
               <img src='/partner1.png' className='w-[80%]' />
             </div>
-            <div className='max-w-[705px] w-full md:w-1/2'>
+            <div className='max-w-[705px] w-full md:w-1/2' data-aos="fade-left" data-aos-delay="200">
               <div className='flex flex-col gap-10'>
                 <div className='flex flex-col gap-5'>
                   <div className='h-[1px] bg-[#11102140]' />
@@ -106,8 +106,8 @@ function PartnerWithUs() {
             </div>
           </div>
           <div className='bg-[url(/public/referral2.png)] bg-contain bg-no-repeat bg-right pt-10 pb-20'>
-            <p className='uppercase text-5xl text-[#111021]'>benefits of being our Partners</p>
-            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-[60px] gap-5'>
+            <p className='uppercase text-5xl text-[#111021]' data-aos="fade-up" data-aos-delay="100">benefits of being our Partners</p>
+            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-[60px] gap-5' data-aos="fade-up" data-aos-delay="200">
               <div className='flex flex-col bg-[rgba(255,255,255,0.8)] rounded-2xl p-6'>
                 <div className='w-8 h-8 flex'>
                   <div className='w-4 h-8 flex flex-col'>
@@ -151,8 +151,8 @@ function PartnerWithUs() {
       <div className='bg-[url(/public/refer-bg.png)] bg-cover bg-no-repeat'>
         <div className='container mx-auto px-4 pb-20'>
           <div className='flex flex-col gap-10'>
-            <p className='uppercase text-5xl text-white mt-20'>why refer to us?</p>
-            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5'>
+            <p className='uppercase text-5xl text-white mt-20' data-aos="fade-up" data-aos-delay="100">why refer to us?</p>
+            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5' data-aos="fade-up" data-aos-delay="200">
               <div className='h-[250px] rounded-2xl bg-[#423ADC0D] border border-[#423ADC0D] p-6 flex flex-col justify-between'>
                 <div className='w-[60px] h-[60px] flex items-center justify-center bg-[#423ADC0D] border border-[#423ADC40] rounded-xl'>
                   <img src='/refer1.png' className='w-6' />
@@ -191,10 +191,10 @@ function PartnerWithUs() {
               </div>
             </div>
           </div>
-          <div className='mt-40'>
+          <div className='mt-40' data-aos="fade-up" data-aos-delay="100">
             <FAQ1 />
           </div>
-          <div className="bg-[#423ADC0D] border border-[#423ADC40] bg-cover bg-no-repeat rounded-3xl flex flex-col md:flex-row items-end">
+          <div className="bg-[#423ADC0D] border border-[#423ADC40] bg-cover bg-no-repeat rounded-3xl flex flex-col md:flex-row items-end" data-aos="fade-up" data-aos-delay="200">
             <div className='md:w-1/2 flex flex-col items-start gap-10 px-[30px] py-[50px]'>
               <p className='text-5xl leading-[1.1] text-white'>
                 <span className='text-[#C6DC3A]'> Partner Up. </span>Grow Together.
