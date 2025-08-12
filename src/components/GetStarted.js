@@ -102,11 +102,11 @@ const GetStarted = () => {
   return (
     <div className="relative bg-[url(/public/GetStarted.png)] bg-contain bg-no-repeat bg-bottom mt-[-72px]">
       <div className='grid sm:grid-cols-2 items-center justify-between'>
-        <div className='flex justify-end'>
+        <div className='flex justify-center md:justify-end'>
           <form
             ref={form}
             onSubmit={handleSubmit}
-            className='w-full z-10 max-w-[320px] md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] pl-4'
+            className='w-full z-10 max-w-full px-4 md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] md:pl-4'
           >
             <div className='flex flex-col justify-end'>
               <p className='uppercase text-white text-5xl'>Get Started</p>
@@ -216,7 +216,7 @@ const GetStarted = () => {
             </div>
           </form>
         </div>
-        <div className='flex justify-end'>
+        <div className='flex justify-center md:justify-end'>
           <img className='object-cover' src="/start.png" alt="Get Started" />
         </div>
       </div>

@@ -114,15 +114,15 @@ function Blog() {
         </div>
       </div>
       <div className='container mx-auto px-4'>
-        <div className="bg-[#423ADC0D] border border-[#423ADC40] bg-cover bg-no-repeat rounded-3xl flex items-center justify-between mt-10 overflow-hidden">
-          <div className='w-1/2 flex flex-col items-start gap-10 px-[30px] py-[50px]'>
+        <div className="bg-[#423ADC0D] border border-[#423ADC40] bg-cover bg-no-repeat rounded-3xl flex flex-col md:flex-row items-end mt-10">
+          <div className='md:w-1/2 flex flex-col items-start gap-10 px-[30px] py-[50px]'>
             <p className='text-5xl leading-[1.1] text-white'>Explore Insights - and
               <span className='text-[#C6DC3A]'> Power Your Growth </span>with the Full iQono Suite
             </p>
             <p className='text-lg leading-[1.1] text-white opacity-60'>From products to payouts, everything you need is one integration away.</p>
             <Button variant="primary">get started</Button>
           </div>
-          <div className='w-1/2'>
+          <div className='w-full md:w-1/2'>
             <img src='/Photoroom6.png' className='' />
           </div>
         </div>

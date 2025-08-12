@@ -6,9 +6,9 @@ function PartnerWithUs() {
   return (
     <>
       <div className="relative bg-[url(/public/Partners.png)] bg-contain bg-no-repeat bg-bottom mt-[-72px]">
-        <div className='grid sm:grid-cols-2 items-center justify-between'>
-          <div className='flex justify-end'>
-            <div className='w-full z-10 max-w-[320px] md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] pl-4'>
+        <div className='flex flex-col md:flex-row items-center justify-between'>
+          <div className='flex justify-center md:justify-end'>
+            <div className='w-full z-10 max-w-full px-4 md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] md:pl-4'>
               <p className='uppercase text-white text-[52px] xl:text-[64px] leading-[1.1] mb-10'>
                 Where Ambitious Partners Scale
               </p>
@@ -21,18 +21,18 @@ function PartnerWithUs() {
               </div>
             </div>
           </div>
-          <div className='flex justify-end'>
+          <div className='flex justify-center md:justify-end'>
             <img className='object-cover' src="/Group1707480808.png" />
           </div>
         </div>
       </div>
       <div className='bg-[#F6F6F6]'>
-        <div className='grid sm:grid-cols-2 items-center justify-between'>
-          <div className='flex mt-[-15%]'>
-            <img className='object-cover w-2/3' src="/partners-bg.png" />
+        <div className='flex flex-col md:flex-row items-center justify-between'>
+          <div className='absolute left-0 md:relative flex mt-[-15%]'>
+            <img className='object-cover w-1/3 md:w-2/3' src="/partners-bg.png" />
           </div>
-          <div className='w-full z-10 max-w-[320px] md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] pl-4'>
-            <p className='text-[#111021] text-5xl leading-[1.1] mb-10'>
+          <div className='w-full z-10 max-w-full px-4 md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] md:pl-4'>
+            <p className='text-[#111021] text-5xl leading-[1.1] mb-10 mt-10 md:mt-0'>
               How to become partners
             </p>
             <p className='text-[#111021] text-lg leading-[1.2] mb-[60px] opacity-80'>
@@ -46,8 +46,8 @@ function PartnerWithUs() {
           </div>
         </div>
         <div className='container mx-auto px-4'>
-          <div className='flex justify-between'>
-            <div className='max-w-[870px] w-1/2'>
+          <div className='flex flex-col md:flex-row justify-between'>
+            <div className='max-w-[870px] w-full md:w-1/2'>
               <p className='uppercase text-5xl leading-[1.1] text-[#111021]'>
                 How Get started?
               </p>
@@ -56,7 +56,7 @@ function PartnerWithUs() {
               </p>
               <img src='/partner1.png' className='w-[80%]' />
             </div>
-            <div className='max-w-[705px] flex-1'>
+            <div className='max-w-[705px] w-full md:w-1/2'>
               <div className='flex flex-col gap-10'>
                 <div className='flex flex-col gap-5'>
                   <div className='h-[1px] bg-[#11102140]' />
@@ -194,15 +194,15 @@ function PartnerWithUs() {
           <div className='mt-40'>
             <FAQ1 />
           </div>
-          <div className="bg-[#423ADC0D] border border-[#423ADC40] bg-cover bg-no-repeat rounded-3xl flex items-center">
-            <div className='w-1/2 flex flex-col items-start gap-10 px-[30px] py-[50px]'>
+          <div className="bg-[#423ADC0D] border border-[#423ADC40] bg-cover bg-no-repeat rounded-3xl flex flex-col md:flex-row items-end">
+            <div className='md:w-1/2 flex flex-col items-start gap-10 px-[30px] py-[50px]'>
               <p className='text-5xl leading-[1.1] text-white'>
                 <span className='text-[#C6DC3A]'> Partner Up. </span>Grow Together.
               </p>
               <p className='text-lg leading-[1.1] text-white opacity-60'>Integrate quickly and scale across markets — no friction, just flow.</p>
               <Button variant="primary">get started</Button>
             </div>
-            <div>
+            <div className='w-full md:w-1/2 mt-10 md:mt-0'>
               <img src='/Photoroom8.png' className='' />
             </div>
           </div>

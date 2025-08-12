@@ -5,9 +5,9 @@ function AboutUs() {
   return (
     <>
       <div className="relative bg-[url(/public/iQono.png)] bg-contain bg-no-repeat bg-bottom">
-        <div className='grid sm:grid-cols-2 items-center justify-between'>
+        <div className='flex flex-col md:flex-row items-center justify-between'>
           <div className='flex justify-end'>
-            <div className='w-full z-10 max-w-[320px] md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] pl-4'>
+            <div className='w-full z-10 max-w-full px-4 md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] md:pl-4'>
               <p className='uppercase text-white text-[52px] xl:text-[64px] leading-[1.1] mb-10'>
                 next-generation payment platform
               </p>
@@ -17,16 +17,16 @@ function AboutUs() {
             </div>
           </div>
           <div className='flex justify-end'>
-            <img className='object-cover w-2/3' src="/Group1707480748.png" />
+            <img className='object-cover md:w-2/3' src="/Group1707480748.png" />
           </div>
         </div>
       </div>
 
-      <div className='grid sm:grid-cols-2 items-center justify-between mt-[calc(350px-40%)]'>
+      <div className='flex flex-col md:flex-row items-center justify-between md:mt-[calc(350px-40%)]'>
         <div className='flex'>
-          <img className='object-cover w-2/3' src="/Group1707480746.png" />
+          <img className='object-cover md:w-2/3' src="/Group1707480746.png" />
         </div>
-        <div className='w-full z-10 max-w-[320px] md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] pl-4'>
+        <div className='w-full z-10 max-w-full px-4 md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] md:pl-4'>
           <p className='text-white text-5xl leading-[1.1] mb-10'>
             Built for Scale. Designed for Control.
           </p>
@@ -46,7 +46,7 @@ function AboutUs() {
         <p className='uppercase text-white text-5xl leading-[1.1] mb-10'>
           our values
         </p>
-        <div className='flex gap-5 mt-10'>
+        <div className='flex flex-col md:flex-row gap-5 mt-10'>
           <div className='flex-1 flex flex-col bg-[#423ADC0D] border border-[#423ADC40] rounded-2xl p-8 gap-10 justify-between'>
             <div className='w-[60px] h-[60px] flex items-center justify-center bg-[#423ADC0D] border border-[#423ADC40] rounded-xl'>
               <p className='text-xl leading-[1.1] text-[#423ADC]'>01</p>
@@ -79,8 +79,8 @@ function AboutUs() {
 
       <div className="bg-[url('/public/bg.png')] bg-cover bg-no-repeat px-4 py-20">
         <div className='container mx-auto px-4'>
-          <div className='flex justify-between'>
-            <div className='max-w-[870px] w-1/2'>
+          <div className='flex flex-col md:flex-row justify-between'>
+            <div className='max-w-[870px] w-full md:w-1/2'>
               <p className='text-5xl leading-[1.1] text-white'>
                 How Get started?
               </p>
@@ -89,7 +89,7 @@ function AboutUs() {
               </p>
               <img src='/get-started.png' className='w-[80%]' />
             </div>
-            <div className='max-w-[705px] flex-1'>
+            <div className='max-w-[705px] w-full md:w-1/2'>
               <div className='flex flex-col gap-10'>
                 <div className='flex flex-col gap-5'>
                   <div className='h-[1px] bg-white' />
@@ -138,15 +138,15 @@ function AboutUs() {
               <Button variant="primary" className='mt-[60px]'>Get Started</Button>
             </div>
           </div>
-          <div className="bg-[#423ADC0D] border border-[#423ADC40] bg-cover bg-no-repeat rounded-3xl flex items-end justify-between mt-10 overflow-hidden">
-            <div className='w-1/2 flex flex-col items-start gap-10 px-[30px] py-[50px]'>
+          <div className="bg-[#423ADC0D] border border-[#423ADC40] bg-cover bg-no-repeat rounded-3xl flex flex-col md:flex-row items-end mt-10">
+            <div className='md:w-1/2 flex flex-col items-start gap-10 px-[30px] py-[50px]'>
               <p className='text-5xl leading-[1.1] text-white'>Start Processing
                 <span className='text-[#423ADC]'> Payments Globally </span>with Speed, Precision, and Full Control
               </p>
               <p className='text-lg leading-[1.1] text-white opacity-60'>Integrate quickly and scale across markets — no friction, just flow.</p>
               <Button variant="primary">get started</Button>
             </div>
-            <div className='w-1/2'>
+            <div className='w-full md:w-1/2 mt-10 md:mt-0'>
               <img src='/Photoroom5.png' className='' />
             </div>
           </div>

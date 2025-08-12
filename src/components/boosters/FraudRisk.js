@@ -9,7 +9,7 @@ function FraudRisk() {
     <>
       <div className='bg-[url(/public/product-bg.png)] bg-cover bg-no-repeat py-10'>
         <div className='container mx-auto px-4'>
-          <div className='flex items-center justify-between'>
+          <div className='flex flex-col md:flex-row items-center justify-between'>
             <div className='flex flex-col items-start gap-10'>
               <p className='uppercase text-xl leading-[1.1] text-[#423ADC]'>01</p>
               <p className='text-5xl leading-[1.1] text-white'>Fraud & Risk Managment</p>
@@ -31,18 +31,18 @@ function FraudRisk() {
                 </Link>
               </div>
             </div>
-            <div className='w-1/2'>
+            <div className='w-full md:w-1/2 mt-10 md:mt-0'>
               <img src='/booster-bg1.png' />
             </div>
           </div>
         </div>
       </div>
       <div className='bg-[#F5F4F9]'>
-        <div className='grid sm:grid-cols-2 items-center justify-between'>
+        <div className='flex flex-col md:flex-row items-center justify-between'>
           <div className='flex'>
-            <img className='object-cover w-2/3' src="/booster1.png" />
+            <img className='object-cover md:w-2/3' src="/booster1.png" />
           </div>
-          <div className='w-full z-10 max-w-[320px] md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] pl-4'>
+          <div className='w-full z-10 max-w-full px-4 md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] md:pl-4'>
             <p className='text-[#111021] text-5xl leading-[1.1] mb-10'>
               Fraud & Risk Management that Scales with You
             </p>
@@ -56,7 +56,9 @@ function FraudRisk() {
             </p>
           </div>
         </div>
-        <FAQ pageType="booster" />
+        <div className='hidden md:block'>
+          <FAQ pageType="booster" />
+        </div>
       </div>
       <PromoSection />
     </>

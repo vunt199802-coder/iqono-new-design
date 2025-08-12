@@ -5,8 +5,8 @@ function PromoSection() {
   return (
     <div className="bg-[url('/public/bg.png')] bg-cover bg-no-repeat py-20">
       <div className='container mx-auto px-4'>
-        <div className='flex justify-between'>
-          <div className='max-w-[870px] w-1/2'>
+        <div className='flex justify-between flex-col md:flex-row'>
+          <div className='max-w-[870px] w-full md:w-1/2'>
             <p className='uppercase text-5xl leading-[1.1] text-white'>
               How Get started?
             </p>
@@ -64,8 +64,8 @@ function PromoSection() {
             <Button variant="primary" className='mt-[60px]'>Get Started</Button>
           </div>
         </div>
-        <div className="bg-[#423ADC0D] border border-[#423ADC40] bg-cover bg-no-repeat rounded-3xl flex items-end mt-10">
-          <div className='w-1/2 flex flex-col items-start gap-10 px-[30px] py-[50px]'>
+        <div className="bg-[#423ADC0D] border border-[#423ADC40] bg-cover bg-no-repeat rounded-3xl flex flex-col md:flex-row items-end mt-10">
+          <div className='md:w-1/2 flex flex-col items-start gap-10 px-[30px] py-[50px]'>
             <p className='text-5xl leading-[1.1] text-white'>Start Processing Globally and
               <span className='text-[#C43ADC]'> Unlock the Full Power of All iQono Products </span>in One Account
             </p>

@@ -38,14 +38,13 @@ const FAQ = ({ questions, pageType }) => {
   return (
     <div className='flex flex-col gap-10 container mx-auto px-4 pb-20 mt-[-50px]'>
       <p className='text-5xl text-[#111021]'>FAQ</p>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
+      <div className='grid items-start grid-cols-1 md:grid-cols-2 gap-5'>
         {faqQuestions.map((item, index) => (
           <div
             key={index}
             className='bg-[#FCFCFC] rounded-2xl px-5 py-3 cursor-pointer h-auto'
             style={{
               minHeight: '64px',
-              height: openIndex === index ? 'auto' : '64px'
             }}
             onClick={() => toggleQuestion(index)}
           >

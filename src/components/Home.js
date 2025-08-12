@@ -48,7 +48,7 @@ const Home = () => {
             </div>
           </div>
           <div className='mt-20 flex flex-col gap-10'>
-            <div className="h-[700px] md:h-[400px] bg-[url('/public/bg-1.png')] bg-cover bg-no-repeat rounded-3xl grid md:grid-cols-2 items-center content-center">
+            <div className="p-4 md:h-[400px] bg-[url('/public/bg-1.png')] bg-cover bg-no-repeat rounded-3xl flex flex-col-reverse md:grid md:grid-cols-2 items-center content-center">
               <img src='/payment1.png' />
               <div className='flex flex-col items-start gap-10 w-5/6'>
                 <p className='uppercase text-xl leading-[1.1] text-[#423ADC]'>01</p>
@@ -59,7 +59,7 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="h-[400px] bg-[url('/public/bg-2.png')] bg-cover bg-no-repeat rounded-3xl grid md:grid-cols-2 items-center content-center">
+            <div className="p-4 md:h-[400px] bg-[url('/public/bg-2.png')] bg-cover bg-no-repeat rounded-3xl flex flex-col-reverse md:grid md:grid-cols-2 items-center content-center">
               <img src='/payment2.png' />
               <div className='flex flex-col items-start gap-10 w-5/6'>
                 <p className='uppercase text-xl leading-[1.1] text-[#423ADC]'>02</p>
@@ -70,7 +70,7 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="h-[400px] bg-[url('/public/bg-3.png')] bg-cover bg-no-repeat rounded-3xl grid md:grid-cols-2 items-center content-center">
+            <div className="p-4 md:h-[400px] bg-[url('/public/bg-2.png')] bg-cover bg-no-repeat rounded-3xl flex flex-col-reverse md:grid md:grid-cols-2 items-center content-center">
               <div className='relative'>
                 <img src='/apms/1.png' className='' />
                 <img src='/apms/2.png' className='absolute w-[50%] top-[32%] left-[15%]' />
@@ -84,7 +84,7 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="h-[400px] bg-[url('/public/bg-4.png')] bg-cover bg-no-repeat rounded-3xl grid md:grid-cols-2 items-center content-center">
+            <div className="p-4 md:h-[400px] bg-[url('/public/bg-2.png')] bg-cover bg-no-repeat rounded-3xl flex flex-col-reverse md:grid md:grid-cols-2 items-center content-center">
               <div className='relative'>
                 <img src='/open-banking/2.png' className='' />
                 <img src='/open-banking/1.png' className='absolute w-[60%] top-[32%] left-[15%]' />
@@ -98,7 +98,7 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="h-[400px] bg-[url('/public/bg-5.png')] bg-cover bg-no-repeat rounded-3xl grid md:grid-cols-2 items-center content-center">
+            <div className="p-4 md:h-[400px] bg-[url('/public/bg-2.png')] bg-cover bg-no-repeat rounded-3xl flex flex-col-reverse md:grid md:grid-cols-2 items-center content-center">
               <div className='relative'>
                 <img src='/payment-gateway/2.png' className='ml-[5%] w-3/4' />
                 <img src='/payment-gateway/1.png' className='absolute w-3/4 top-[26%] left-[4%]' />
@@ -229,8 +229,8 @@ const Home = () => {
       </div>
       <div className="bg-[url('/public/bg.png')] bg-cover bg-no-repeat px-4 py-20">
         <div className='container mx-auto px-4'>
-          <div className='flex justify-between'>
-            <div className='max-w-[870px] w-1/2'>
+          <div className='flex justify-between flex-col md:flex-row'>
+            <div className='max-w-[870px] w-full md:w-1/2'>
               <p className='text-5xl leading-[1.1] text-white'>
                 How Get started?
               </p>
@@ -288,8 +288,8 @@ const Home = () => {
               <Button variant="primary" className='mt-[60px]'>Get Started</Button>
             </div>
           </div>
-          <div className="bg-[#423ADC0D] border border-[#423ADC40] bg-cover bg-no-repeat rounded-3xl flex items-end mt-10">
-            <div className='w-1/2 flex flex-col items-start gap-10 px-[30px] py-[50px]'>
+          <div className="bg-[#423ADC0D] border border-[#423ADC40] bg-cover bg-no-repeat rounded-3xl flex flex-col md:flex-row items-end mt-10">
+            <div className='md:w-1/2 flex flex-col items-start gap-10 px-[30px] py-[50px]'>
               <p className='uppercase text-xl leading-[1.1] text-[#423ADC]'>01</p>
               <p className='text-5xl leading-[1.1] text-white'>Start Processing
                 <span className='text-[#423ADC]'> Payments Globally </span>with Speed, Precision, and Full Control
