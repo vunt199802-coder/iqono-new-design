@@ -66,7 +66,7 @@ const GetStarted = () => {
 
       if (emailjsConfigured) {
         const serviceId = 'service_owf7nen';
-        const templateId = 'template_791nfis';
+        const templateId = 'template_8mjycpe';
         const publicKey = '95XYeHWL6YgXKx7c8';
 
         emailjs.sendForm(serviceId, templateId, form.current, publicKey)
