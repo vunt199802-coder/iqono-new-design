@@ -5,7 +5,7 @@ function AboutUs() {
   return (
     <>
       <div className="relative bg-[url(/public/iQono.png)] bg-contain bg-no-repeat bg-bottom">
-        <div className='flex flex-col md:flex-row items-center justify-between'>
+        <div className='grid md:grid-cols-2 items-center justify-between'>
           <div className='flex justify-end' data-aos="fade-right" data-aos-delay="100">
             <div className='w-full z-10 max-w-full px-4 md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] md:pl-4'>
               <p className='uppercase text-white text-[52px] xl:text-[64px] leading-[1.1] mb-10'>
@@ -22,7 +22,7 @@ function AboutUs() {
         </div>
       </div>
 
-      <div className='flex flex-col md:flex-row items-center justify-between md:mt-[calc(350px-40%)]'>
+      <div className='grid md:grid-cols-2 items-center justify-between md:mt-[calc(350px-40%)]'>
         <div className='flex' data-aos="fade-right" data-aos-delay="100">
           <img className='object-cover md:w-2/3' src="/Group1707480746.png" />
         </div>

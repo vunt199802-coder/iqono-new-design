@@ -161,6 +161,7 @@ const Navbar = () => {
                         key={dropdownItem.name}
                         to={dropdownItem.href}
                         className="block px-6 py-2 text-[16px] text-white hover:text-[#423ADC]"
+                        onClick={() => setIsOpen(false)}
                       >
                         {dropdownItem.name}
                       </Link>
@@ -173,6 +174,7 @@ const Navbar = () => {
               <Link
                 to="/get-started"
                 className='w-full uppercase flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-normal text-sm leading-[1.1] text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-opacity-50 bg-[#423ADC] border border-[#423ADC] hover:bg-[#423ADC44]'
+                onClick={() => setIsOpen(false)}
               >
                 <div className='flex w-4 h-4'>
                   <div className='flex flex-col w-2'>

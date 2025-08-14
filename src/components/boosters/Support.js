@@ -38,7 +38,7 @@ function Support() {
         </div>
       </div>
       <div className='bg-[#F5F4F9]'>
-        <div className='flex flex-col md:flex-row items-center justify-between'>
+        <div className='grid md:grid-cols-2 items-center justify-between'>
           <div className='flex' data-aos="fade-right" data-aos-delay="100">
             <img className='object-cover md:w-2/3' src="/booster6.png" />
           </div>

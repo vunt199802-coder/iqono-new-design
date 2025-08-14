@@ -5,7 +5,7 @@ import FAQ1 from '../FAQ1';
 function ReferralProgram() {
   return (
     <>
-      <div className="relative bg-[url(/public/Referral.png)] bg-contain bg-no-repeat bg-bottom mt-[-72px]">
+      <div className="relative bg-[url(/public/Referral.png)] bg-contain bg-no-repeat bg-bottom">
         <div className='grid md:grid-cols-2 items-center justify-between'>
           <div className='flex justify-center md:justify-end'>
             <div className='w-full z-10 max-w-full px-4 md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] md:pl-4'>
@@ -15,7 +15,7 @@ function ReferralProgram() {
               <p className='text-white text-lg leading-[1.2] mb-[60px] opacity-80'>
                 Invite businesses to join and get rewarded for every transaction they make — simple, fast, and scalable.
               </p>
-              <div className='flex gap-[30px]'>
+              <div className='flex gap-[30px] flex-col items-start md:flex-row'>
                 <Button variant="primary">Get Started</Button>
                 <Button variant="outline">About Referral</Button>
               </div>
