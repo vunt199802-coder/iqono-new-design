@@ -23,8 +23,8 @@ function AboutUs() {
       </div>
 
       <div className='grid md:grid-cols-2 items-center justify-between md:mt-[calc(350px-40%)]'>
-        <div className='flex' data-aos="fade-right" data-aos-delay="100">
-          <img className='object-cover md:w-3/4' src="/Group1707480746.png" />
+        <div className='hidden md:flex mt-10' data-aos="fade-right" data-aos-delay="100">
+          <img className='object-cover' src="/Group1707480746.png" />
         </div>
         <div className='w-full z-10 max-w-full px-4 md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] md:pl-4' data-aos="fade-left" data-aos-delay="200">
           <p className='text-white text-5xl leading-[1.1] mb-10'>
