@@ -14,7 +14,7 @@ const Home = () => {
                 Accelerate Payments. Maximize Acceptance. Go Global.
               </p>
               <p className='text-white text-lg leading-[1.2] mb-[60px] opacity-80'>
-                High-risk friendly. Global-ready. Start processing in under 48 hours.
+                Global-ready. Start processing in under 48 hours.
               </p>
               <div className='flex gap-[30px] flex-col md:flex-row'>
                 <Button variant="primary" className='w-full md:w-auto'>Get Started</Button>
