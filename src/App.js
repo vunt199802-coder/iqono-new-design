@@ -26,6 +26,9 @@ import PartnerWithUs from './components/partners/PartnerWithUs';
 
 import './App.css';
 import GetStarted from './components/GetStarted';
+import Terms from './components/Terms';
+import Privacy from './components/Privacy';
+import Cookie from './components/Cookie';
 
 function App() {
   return (
@@ -57,6 +60,9 @@ function App() {
             <Route path="/partners/join" element={<PartnerWithUs />} />
 
             <Route path="/get-started" element={<GetStarted />} />
+            <Route path="/terms-and-conditions" element={<Terms />} />
+            <Route path="/privacy-policy" element={<Privacy />} />
+            <Route path="/cookie-policy" element={<Cookie />} />
           </Routes>
         </div>
         <Footer />

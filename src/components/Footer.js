@@ -64,6 +64,9 @@ const Footer = () => {
               <Link to="/company/blog" className='flex flex-col text-[rgba(255,255,255,0.8)] text-sm leading-[1.1]'>
                 Blog
               </Link>
+              <a href="https://developer.iqono.com/" target="_blank" rel="noopener noreferrer" className='flex flex-col text-[rgba(255,255,255,0.8)] text-sm leading-[1.1]'>
+                Developers
+              </a>
             </div>
             <div className='flex gap-5 mt-[60px]'>
               {/* <a href='#'>
@@ -84,7 +87,15 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between" />
+        <div className="my-8 border-t border-gray-700 flex flex-col md:flex-row justify-between" />
+        <div className='flex gap-6'>
+          <p className='flex flex-col text-[rgba(255,255,255,0.8)] text-sm leading-[1.5]'>
+            {new Date().getFullYear()} iQono — All Rights Reserved
+          </p>
+          <Link to="/terms-and-conditions" className="text-purple-400 hover:text-purple-300">Terms & Conditions</Link>
+          <Link to="/cookie-policy" className="text-purple-400 hover:text-purple-300">Cookies Policy</Link>
+          <Link to="/privacy-policy" className="text-purple-400 hover:text-purple-300">Privacy Policy</Link>
+        </div>
       </div>
     </footer>
   );

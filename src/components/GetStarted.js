@@ -21,6 +21,8 @@ const GetStarted = () => {
     error: null
   });
 
+  const RECAPTCHA_SITE_KEY = '6LfAGLQrAAAAALqogFL16W5JuAJ5_z80DtKmx_n_';
+
   const validate = () => {
     const newErrors = {};
 
@@ -55,35 +57,74 @@ const GetStarted = () => {
       [e.target.name]: e.target.value
     });
     setErrors({});
+    setStatus({ submitting: false, submitted: false, error: null });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validate()) {
       setStatus({ submitting: true, submitted: false, error: null });
 
-      console.log('Form data submitted:', formData);
+      try {
+        if (window.grecaptcha && window.grecaptcha.enterprise) {
+          window.grecaptcha.enterprise.ready(() => {
+            window.grecaptcha.enterprise.execute(RECAPTCHA_SITE_KEY, {
+              action: 'SUBMIT_FORM'
+            }).then((token) => {
+              console.log('reCAPTCHA token generated:', token);
+              console.log('Form data submitted:', formData);
 
-      if (emailjsConfigured) {
-        const serviceId = 'service_owf7nen';
-        const templateId = 'template_8mjycpe';
-        const publicKey = '95XYeHWL6YgXKx7c8';
+              if (emailjsConfigured) {
+                const serviceId = 'service_owf7nen';
+                const templateId = 'template_8mjycpe';
+                const publicKey = '95XYeHWL6YgXKx7c8';
 
-        emailjs.sendForm(serviceId, templateId, form.current, publicKey)
-          .then((result) => {
-            console.log('Email sent successfully:', result.text);
-            setStatus({ submitting: false, submitted: true, error: null });
-            resetForm();
-          })
-          .catch((error) => {
-            console.error('Failed to send email:', error.text);
-            setStatus({ submitting: false, submitted: false, error: error.text });
+                const recaptchaInput = form.current.querySelector('input[name="g-recaptcha-response"]');
+                if (recaptchaInput) {
+                  recaptchaInput.value = token;
+                }
+
+                emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+                  .then((result) => {
+                    console.log('Email sent successfully:', result.text);
+                    setStatus({ submitting: false, submitted: true, error: null });
+                    resetForm();
+                    setTimeout(() => {
+                      setStatus({ submitting: false, submitted: false, error: null });
+                    }, 5000);
+                  })
+                  .catch((error) => {
+                    console.error('Failed to send email:', error.text);
+                    setStatus({ submitting: false, submitted: false, error: error.text });
+                  });
+              } else {
+                setTimeout(() => {
+                  setStatus({ submitting: false, submitted: true, error: null });
+                  resetForm();
+                  setTimeout(() => {
+                    setStatus({ submitting: false, submitted: false, error: null });
+                  }, 5000);
+                }, 1000);
+              }
+            }).catch((error) => {
+              console.error('reCAPTCHA execute error:', error);
+              setStatus({ 
+                submitting: false, 
+                submitted: false, 
+                error: 'reCAPTCHA verification failed. Please try again.' 
+              });
+            });
           });
-      } else {
-        setTimeout(() => {
-          setStatus({ submitting: false, submitted: true, error: null });
-          resetForm();
-        }, 1000);
+        } else {
+          throw new Error('reCAPTCHA not loaded');
+        }
+      } catch (error) {
+        console.error('reCAPTCHA error:', error);
+        setStatus({ 
+          submitting: false, 
+          submitted: false, 
+          error: 'reCAPTCHA verification failed. Please try again.' 
+        });
       }
     }
   };
@@ -110,6 +151,7 @@ const GetStarted = () => {
             className='w-full z-10 max-w-full px-4 md:max-w-[384px] lg:max-w-[512px] xl:max-w-[640px] 2xl:max-w-[768px] md:pl-4'
           >
             <input type="hidden" name="to_email" value={formData.to_email} />
+            <input type="hidden" name="g-recaptcha-response" value="" />
             <div className='flex flex-col justify-end'>
               <p className='uppercase text-white text-5xl'>Get Started</p>
               <p className='text-white text-lg opacity-80 mt-5'>
@@ -193,6 +235,17 @@ const GetStarted = () => {
                 {status.error && (
                   <p className="text-red-400 text-sm mb-3">Failed to send message: {status.error}</p>
                 )}
+                <p className="text-gray-400 text-xs mb-3">
+                  This site is protected by reCAPTCHA and the Google{' '}
+                  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">
+                    Privacy Policy
+                  </a>{' '}
+                  and{' '}
+                  <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">
+                    Terms of Service
+                  </a>{' '}
+                  apply.
+                </p>
                 <button
                   type="submit"
                   disabled={status.submitting}
