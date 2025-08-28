@@ -14,7 +14,7 @@ const Home = () => {
                 Accelerate Payments. Maximize Acceptance. Go Global.
               </p>
               <p className='text-white text-lg leading-[1.2] mb-[60px] opacity-80'>
-                High-risk friendly. Global-ready. Start processing in under 48 hours.
+                Global-ready. Start processing in under 48 hours.
               </p>
               <div className='flex gap-[30px] flex-col md:flex-row'>
                 <Button variant="primary" className='w-full md:w-auto'>Get Started</Button>
@@ -53,7 +53,7 @@ const Home = () => {
               <div className='flex flex-col items-start gap-10 w-5/6'>
                 <p className='uppercase text-xl leading-[1.1] text-[#423ADC]'>01</p>
                 <p className='text-5xl leading-[1.1] text-white'>Payouts solutions</p>
-                <p className='text-lg leading-[1.1] text-white opacity-80'>Global payouts in local currencies — fast, automated, and compliant.</p>
+                <p className='text-lg leading-[1.1] text-white opacity-80'>Deliver fast, reliable, and scalable payouts to customers, partners, and suppliers across global markets.</p>
                 <Link to="/products/payouts">
                   <Button variant="outline">learn more</Button>
                 </Link>
@@ -64,7 +64,7 @@ const Home = () => {
               <div className='flex flex-col items-start gap-10 w-5/6'>
                 <p className='uppercase text-xl leading-[1.1] text-[#423ADC]'>02</p>
                 <p className='text-5xl leading-[1.1] text-white'>Card acquiring</p>
-                <p className='text-lg leading-[1.1] text-white opacity-80'>Accept high-risk cards with smart routing and high approval rates.</p>
+                <p className='text-lg leading-[1.1] text-white opacity-80'>Seamlessly accept credit and debit card payments worldwide with secure technology and high approval rates.</p>
                 <Link to="/products/card-acquiring">
                   <Button variant="outline">learn more</Button>
                 </Link>
@@ -78,7 +78,7 @@ const Home = () => {
               <div className='flex flex-col items-start gap-10 w-5/6'>
                 <p className='uppercase text-xl leading-[1.1] text-[#423ADC]'>03</p>
                 <p className='text-5xl leading-[1.1] text-white'>APMs</p>
-                <p className='text-lg leading-[1.1] text-white opacity-80'>Accept high-risk cards with smart routing and high approval rates.</p>
+                <p className='text-lg leading-[1.1] text-white opacity-80'>Expand your reach by offering trusted local alternative payment methods tailored to each market you operate in.</p>
                 <Link to="/products/apms">
                   <Button variant="outline">learn more</Button>
                 </Link>
@@ -92,7 +92,7 @@ const Home = () => {
               <div className='flex flex-col items-start gap-10 w-5/6'>
                 <p className='uppercase text-xl leading-[1.1] text-[#423ADC]'>04</p>
                 <p className='text-5xl leading-[1.1] text-white'>Open Banking</p>
-                <p className='text-lg leading-[1.1] text-white opacity-80'>Accept high-risk cards with smart routing and high approval rates.</p>
+                <p className='text-lg leading-[1.1] text-white opacity-80'>Empower your business with direct bank-to-bank payments for lower fees, higher speed, and stronger customer conversion.</p>
                 <Link to="/products/open-banking">
                   <Button variant="outline">learn more</Button>
                 </Link>
@@ -106,7 +106,7 @@ const Home = () => {
               <div className='flex flex-col items-start gap-10 w-5/6'>
                 <p className='uppercase text-xl leading-[1.1] text-[#423ADC]'>05</p>
                 <p className='text-5xl leading-[1.1] text-white'>Payment Gateway</p>
-                <p className='text-lg leading-[1.1] text-white opacity-80'>Accept high-risk cards with smart routing and high approval rates.</p>
+                <p className='text-lg leading-[1.1] text-white opacity-80'>A unified, intelligent gateway that simplifies, secures, and optimizes every transaction in one place.</p>
                 <Link to="/products/payment-gateway">
                   <Button variant="outline">learn more</Button>
                 </Link>
